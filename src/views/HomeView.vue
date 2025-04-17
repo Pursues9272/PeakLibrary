@@ -1,11 +1,9 @@
 <template>
   <div class="indexHome-box">
     <header class="indexHome-box-left">
-      <SystemNavLeft></SystemNavLeft>
     </header>
     <main class="indexHome-box-right">
       <div class="indexHome-box-title">
-        <SystemHeader></SystemHeader>
       </div>
       <div class="indexHome-box-main">
         <router-view v-slot="{ Component }">
@@ -19,8 +17,6 @@
 </template>
 
 <script setup lang="ts">
-import SystemNavLeft from '@/components/common/SystemNavLeft.vue'
-import SystemHeader from '@/components/common/SystemHeader.vue'
 </script>
 
 <style scoped lang="less">

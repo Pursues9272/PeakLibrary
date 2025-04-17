@@ -17,14 +17,6 @@ const router = createRouter({
             title: '首页'
           },
           component: () => import('../views/firstPage_module/FirstPageView.vue')
-        },
-        {
-          path: '/detection-data',
-          name: 'DetectionDataView',
-          meta: {
-            title: '检测数据'
-          },
-          component: () => import('../views/detectionData_module/DetectionDataView.vue')
         }
       ]
     },
@@ -33,21 +25,6 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue')
     },
-    {
-      path: '/logo-view',
-      name: 'LogonView',
-      component: () => import('../views/logon_module/LogonView.vue')
-    },
-    {
-      path: '/system-header',
-      name: 'SystemHeader',
-      component: () => import('../components/common/SystemHeader.vue')
-    },
-    {
-      path: '/system-navLeft',
-      name: 'SystemNavLeft',
-      component: () => import('../components/common/SystemNavLeft.vue')
-    }
   ]
 })
 router.beforeEach((to, from, next) => {
