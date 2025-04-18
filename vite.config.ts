@@ -20,7 +20,21 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      cesium: 'cesium',
     }
-  }
+  },
+  define: {
+    CESIUM_BASE_URL: JSON.stringify('/cesium'),
+  },
+  build: {
+    rollupOptions: {
+      external: ['cesium'],
+    },
+  },
+  server: {
+    fs: {
+      allow: ['.'],
+    },
+  },
 })

@@ -1,6 +1,6 @@
 # Project-templates
 
-一个vue3的项目模板
+基于vue3的web低空经济项目
 
 # Technology Stack
  构建工具：Vite

@@ -16,8 +16,8 @@
 
 <body>
     <!--CesiumJS脚本与样式-->
-    <script src="https://cesium.com/downloads/cesiumjs/releases/1.117/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesium.com/downloads/cesiumjs/releases/1.117/Build/Cesium/Widgets/widgets.css"
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.128/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.128/Build/Cesium/Widgets/widgets.css"
         rel="stylesheet" />
     <!--云境插件JS-->
     <script src="https://a.amap.com/yunjing/static/cesium/yunjing-for-cesium.js"></script>
@@ -30,7 +30,7 @@
 
         const viewer = new Cesium.Viewer('cesiumContainer', {
             terrainProvider: new Cesium.EllipsoidTerrainProvider(), // 使用默认地形（非真实）
-            // baseLayer: new YunJing.AMapSatelliteLayer(), // 卫星图
+            baseLayer: new YunJing.AMapSatelliteLayer(), // 卫星图
             // baseLayer: new YunJing.AMapVectorLayer(), // 矢量道路图层
             scene3DOnly: true,
             contextOptions: {
@@ -43,7 +43,7 @@
 
         const { YunJingLayer } = YunJing;
         const yunjingLayer = new YunJingLayer({
-            url: 'http://localhost:8848/tileSet.json',
+            url: 'http://192.168.110.52:8082/tileSet.json',
             // url: 'https://a.amap.com/yunjing/static/cesium/data/changping-3km18/tileset84.json',
             viewer,
             depthTest: true //需要拾取模型坐标的时候设置为true

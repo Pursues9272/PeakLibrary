@@ -1,10 +1,6 @@
 <template>
   <div class="indexHome-box">
-    <header class="indexHome-box-left">
-    </header>
     <main class="indexHome-box-right">
-      <div class="indexHome-box-title">
-      </div>
       <div class="indexHome-box-main">
         <router-view v-slot="{ Component }">
           <transition name="fade" mode="out-in">

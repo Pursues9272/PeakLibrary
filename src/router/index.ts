@@ -11,19 +11,14 @@ const router = createRouter({
       component: HomeView,
       children: [
         {
-          path: '/first-page',
-          name: 'FirstPageView',
+          path: '/main-view',
+          name: 'MainView',
           meta: {
             title: '首页'
           },
-          component: () => import('../views/firstPage_module/FirstPageView.vue')
+          component: () => import('../views/visualLarge_screen/MainView.vue')
         }
       ]
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
     },
   ]
 })
